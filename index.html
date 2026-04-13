@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>JoreDev - Gerador de CSS ⚡</title>
+  </head>
+  <body>
+    <h1>Gerador de CSS <span>com IA</span> ⚡</h1>
+    <p>Descreva o que imagina e veja a mágica acontecer</p>
+    <textarea
+      rows="3"
+      name="textArea"
+      id="textArea"
+      placeholder="Ex: Uma Seta quicando..."
+    ></textarea>
+    <button id="buttonGenerate">Gerar CSS ⚡</button>
+
+    <div id="resultBlock">
+      <div>
+        <h2>Código</h2>
+        <p id="codeBlock"></p>
+      </div>
+      <div>
+        <h2>Preview</h2>
+        <iframe id="codeResult"></iframe>
+      </div>
+    </div>
+  </body>
+  <script src="./scripts.js"></script>
+</html>

@@ -50,6 +50,10 @@ button {
   cursor: pointer;
   margin-top: 10px;
 }
+#titleBody {
+  text-align: center;
+}
+
 #resultBlock {
   display: flex;
   justify-content: center;

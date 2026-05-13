@@ -13,7 +13,7 @@ export default async function handler(req, res) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: "Bearer " + apiKey,
+        Authorization: `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
         model: "llama-3.3-70b-versatile",
@@ -32,7 +32,7 @@ export default async function handler(req, res) {
     });
 
     const dados = await response.json();
-    
+
     res.status(200).json(dados);
   } catch (error) {
     res.status(500).json({ error: "Erro ao consultar a API" });

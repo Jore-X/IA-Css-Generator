@@ -59,9 +59,15 @@ button {
   justify-content: center;
   width: 100%;
   max-width: 1200px;
+  height: 100%;
   gap: 20px;
   margin-top: 10px;
   flex-wrap: wrap;
+}
+
+.divCode {
+  width: 45%;
+  height: 100%;
 }
 
 #codeBlock {
@@ -74,6 +80,8 @@ button {
   line-height: 2;
   overflow: auto;
   width: 100%;
+  aspect-ratio: 4/5;
+  height: 100%;
   max-width: 450px;
   max-height: 450px;
   white-space: pre-wrap;
@@ -89,4 +97,20 @@ button {
   border: 1px solid #27272a;
   border-radius: 12px;
   overflow: auto;
+}
+
+@media screen and (max-width: 768px) {
+  #resultBlock {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  #resultBlock >div > h2{
+    text-align: center;
+  }
+  .divCode {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 }

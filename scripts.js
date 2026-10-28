@@ -4,7 +4,7 @@ const btnGenerate = document.getElementById("buttonGenerate");
 async function gerarCodigo() {
   //peguei a caixa de texto
   const textUser = document.getElementById("textArea").value;
-  console.log(textUser);
+
   const codeBlock = document.getElementById("codeBlock");
   const codeResult = document.getElementById("codeResult");
 
@@ -15,8 +15,13 @@ async function gerarCodigo() {
     },
     body: JSON.stringify({ texto: textUser }),
   });
+  console.log(response);
+  if (!response.ok) {
+    console.log("Resposta Inexperada: ", response.statusText);
+    codeBlock.textContent = "Resposta Inexperada: " + response.statusText;
+    return;
+  }
 
-  
   const dados = await response.json();
   console.log(dados);
   const Result = dados.choices[0].message.content;
